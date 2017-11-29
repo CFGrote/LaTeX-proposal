@@ -10,7 +10,7 @@
 % The development version of this file can be found at
 % https://github.com/KWARC/LaTeX-proposal
 % \fi
-% 
+%
 % \iffalse
 %<cls|pdata|reporting>\NeedsTeXFormat{LaTeX2e}[1999/12/01]
 %<cls>\ProvidesClass{euproposal}[2017/11/29 v1.5 EU Proposal]
@@ -40,9 +40,9 @@
 \end{document}
 %</driver>
 % \fi
-% 
+%
 %\iffalse\CheckSum{642}\fi
-% 
+%
 % \changes{v0.1}{2007/05/07}{used in the SciML proposal}
 % \changes{v0.2}{2007/05/09}{First Version with Documentation}
 % \changes{v0.3}{2007/06/04}{staff effort table finally works, released}
@@ -50,9 +50,9 @@
 % \changes{v1.3}{2011/05/18}{basing this on proposal.cls}
 % \changes{v1.4}{2012/01/18}{various tweaks for the Jan 2012 proposal deadline}
 % \changes{v1.4}{2015/01/14}{lots of tweaks}
-% 
+%
 % \GetFileInfo{euproposal.cls}
-% 
+%
 % \MakeShortVerb{\|}
 % \title{Preparing FP7 EU Proposals and Reports in {\LaTeX} with \texttt{euproposal.cls}}
 %    \author{Michael Kohlhase\\
@@ -63,9 +63,9 @@
 % \begin{abstract}
 %   The |euproposal| class supports many of the specific elements of a Framework 7
 %   Proposal. It is optimized towards collaborative projects. The package comes with an
-%   extensive example (a fake EU proposal) that shows all elements in action. 
+%   extensive example (a fake EU proposal) that shows all elements in action.
 % \end{abstract}
-% 
+%
 % \tableofcontents\newpage
 %
 % \section{Introduction}\label{sec:intro}
@@ -74,8 +74,8 @@
 %   contributions from many individuals. The use of an ASCII-based format like {\LaTeX}
 %   allows to coordinate the process via a source code control system like
 %   \subversion, allowing the proposal writing team to concentrate on the contents
-%   rather than the mechanics of wrangling with text fragments and revisions. 
-% 
+%   rather than the mechanics of wrangling with text fragments and revisions.
+%
 %   The |euproposal| class extends the |proposal| class~\cite{Kohlhase:pplp:svn} and
 %   supports many of the specific elements of Part B of a Framework 7 Proposal. The
 %   package documentation is still preliminary, fragmented and incomplete and only dwells
@@ -96,16 +96,16 @@
 %   version. The CTAN archive always contains the latest stable version, the development
 %   version can be found at \url{https://github.com/KWARC/LaTeX-proposal}. For bug reports
 %   please use the sTeX TRAC at \url{https://github.com/KWARC/LaTeX-proposal/issues}.
-%   
+%
 % \section{The User Interface}\label{sec:user-interface}
-% 
+%
 % In this section we will describe the functionality offered by the |euproposal| class
 % along the lines of the macros and environments the class provides. Much of the
 % functionality can better be understood by studying the functional example |proposal.tex|
 % (and its dependents) that comes with the |euproposal| package in conjunction with the
 % proposer's EU proposer's guidelines (we have included it as |***| for convenience into
 % the package distribution).\ednote{MK@MK do that and talk about reporting as well.}
-% 
+%
 % \subsection{Package Options}\label{sec:user:options}
 %
 % As usual in {\LaTeX}, the package is loaded by
@@ -114,9 +114,9 @@
 % versions EU proposals want non-standard numbering schemes (e.g. starting with
 % \textbf{B...} since we are writing Part B.), this can be reached by giving the |propB|
 % option.
-% 
+%
 % \subsection{Proposal Metadata and Title page}\label{sec:user:metadata}
-% 
+%
 % The metadata of the proposal is specified in the \DescribeEnv{proposal}|proposal|
 % environment, which also generates the title page and the first section of the proposal
 % as well as the last pages of the proposal with the signatures, enclosures, and
@@ -143,14 +143,14 @@
 %   proposal coordinator. The |euproposal| package uses the |workaddress| package for
 %   representation of personal metadata, see~\cite{Kohlhase:workaddress:ctan} for details.
 % \item The \DescribeMacro{coordinatorsite}|coordinatorsite| key gives the identifier of
-%   the coordinating site (for the table). 
+%   the coordinating site (for the table).
 % \item If given, the \DescribeMacro{iconrowheight}|iconrowheight| key instructs the
 %   |euproposal| class to make a line with the logos of the participants at the bottom of
 %   the title page, and specify their heights; |1.5cm| is often a good value.
 % \end{compactitem}
-% 
+%
 % \subsection{Work Packages and Work Areas}\label{sec:user:wpwa}
-% 
+%
 % \DescribeMacro{type} The |type| key specifies the activity type of the work package:
 % |RTD| = Research and technological development (including any activities to prepare for
 % the dissemination and/or exploitation of project results, and coordination activities);
@@ -158,10 +158,10 @@
 % activities, if applicable in this call.
 %
 % \subsection{Milestones and Deliverables}\label{sec:user:deliverables}
-% 
+%
 % |euproposal.cls| adds the \DescribeMacro{verif}|verif| key to \DescribeMacro{\milestone}
 % for specifying a means of verification that the milestone has been successful.
-% 
+%
 % With this, we can generate the milestone table that is required in many EU
 % proposals. This can simply be done via the
 % \DescribeMacro{\milestonetable}|\milestonetable| macro. It takes a keyword argument with
@@ -169,33 +169,33 @@
 % widths \DescribeMacro{wname}|wname|, \DescribeMacro{wdeliv}|wdeliv|, and
 % \DescribeMacro{wverif}|wverif| that can be used to specify different widths for the
 % name/deliverables/verification columns in the milestone table.
-% 
+%
 % \subsection{Risks}\label{sec:user:risks}
 % In some EU proposals (e.g. FET), we need to identify risks and contingency and specify
 % mitigation plans for them. In the |euproposal| we use two environments to mark them up.
-% 
+%
 % \DescribeMacro{risk}|\begin{risk}{|\meta{title}|}{|\meta{prob}|}{|\meta{grav}|}|\ldots|\end{risk}|
 % makes a paragraph no a risk \meta{title} with gravity \meta{grav} and probability
 % \meta{prob}, where the body of the environment contains a description of the risk. The
 % \DescribeMacro{riskcont}|riskcont| is a variant, where \meta{title} names a risk and the
 % body is a description of the contingency plan.
-% 
+%
 % \subsection{Relevant Papers}\label{sec:user:papers}
-% 
+%
 % Sometimes we want to list the relevant papers in the site descriptions.  We use the
 % |biblatex| package to automate this. We only need to use
 % \DescribeMacro{\keypubs}|\keypubs[|\meta{keys}|]{|\meta{refs}|}|, where \meta{keys} that
 % specify what papers are selected and \meta{refs} is a comma-separated list of bibtex
 % keys from the bibTeX database used in the proposal.
-% 
+%
 % The papers listed in |\keypubs| are put into a special bib\LaTeX category
 % \DescribeMacro{featured}|featured|, and can thus be excluded from the general
 % bibliography by adding |notcategory=featured| to the final |\printbibliography|.
-% 
+%
 %
 % \begin{newpart}{MK@MK: This is new, and only partially implemented}
 % \subsection{Reporting Infrastructure}\label{sec:user:report}
-% 
+%
 % The |eureporting| class gives an infrastructure for writing final reports of completed
 % projects (see the file |finalreport.tex| in the package distribution). The
 % \DescribeEnv{report}|report| environment has functionality analogous to the |proposal|
@@ -205,49 +205,49 @@
 % project by EU. Note that in the case of multiple proposers, you can use multiple
 % instances of |key| to specify more than one reference key.
 % \end{newpart}
-% 
+%
 % \subsection{The Grant Agreement}\label{sec:user:grantagreement}
-% 
+%
 % EU Proposals reuse large parts of the proposal in the grant agreement -- a part of the
 % contract that describes the work and research the consortium has agreed to undertake. We
 % can directly can directly generate the the grant agreement from the proposal by
 % subsetting and adding some special source files. The |euproposal| class takes the option
 % |grantagreement| for this, if this option is given, then a grant agreement is
 % generated. This is most simply done by an options trick: We use a macro |\classoptions|
-% in the class options in the preamble of the main proposal file |proposal.tex|, e.g. 
+% in the class options in the preamble of the main proposal file |proposal.tex|, e.g.
 % \begin{verbatim}
 % \providecommand{\classoptions}{keys}
 % \documentclass[noworkareas,deliverables,\classoptions]{proposal}
-% ... 
+% ...
 % \end{verbatim}
-% and then we can just make a new file |grantagreement.tex| of the form 
+% and then we can just make a new file |grantagreement.tex| of the form
 % \begin{verbatim}
 % \newcommand{\classoptions}{submit,grantagreement}
 % \input{proposal.tex}
 % \end{verbatim}
 % that amounts to running |proposal.tex| with different options.
-% 
+%
 % \section{Limitations and Enhancements}\label{sec:limitations}
-% 
+%
 % The |euproposal| is relatively early in its development, and many enhancements are
 % conceivable. We will list them here.
 % \begin{enumerate}
-% \item none reported yet. 
+% \item none reported yet.
 % \end{enumerate}
 % If you have other enhancements to propose or feel you can alleviate some limitation,
-% please feel free to contact the author. 
+% please feel free to contact the author.
 %
 % \StopEventually{\newpage\PrintIndex\newpage\PrintChanges\newpage\printbibliography}\newpage
 %
 % \section{The Implementation}\label{sec:implementation}
 %
 % In this section we describe the implementation of the functionality of the |euproposal|
-% and |eureporting| classes and the |eupdata| package. 
+% and |eureporting| classes and the |eupdata| package.
 %
 % \subsection{Package Options and Format Initialization}\label{sec:impl:options}
-% 
-% We first set up the options for the package. 
-% 
+%
+% We first set up the options for the package.
+%
 %    \begin{macrocode}
 %<*cls>
 \newif\ifpartB\partBfalse
@@ -259,7 +259,7 @@
 %    \end{macrocode}
 %
 %    Then we load the packages we make use of
-% 
+%
 %    \begin{macrocode}
 %<cls>\ifpartB\LoadClass[report,noRAM]{proposal}\else\LoadClass[noRAM]{proposal}\fi
 %<reporting>\LoadClass[report,noRAM]{reporting}
@@ -276,9 +276,9 @@
 \counterwithin{table}{subsection}
 %</cls|reporting>
 %    \end{macrocode}
-%    
+%
 % \subsection{Proposal Metadata and Title Page}\label{sec:impl:metadata}
-%  
+%
 % We extend the metadata keys from the |proposal| class.
 %    \begin{macrocode}
 %<*pdata>
@@ -293,14 +293,14 @@
 \def\prop@gen@outcome{??}\def\prop@gen@outcomeid{??}
 \define@key{prop@gen}{outcome}{\def\prop@gen@outcome{#1}\pdata@def{prop}{gen}{outcome}{#1}}
 \define@key{prop@gen}{outcomeid}{\def\prop@gen@outcomeid{#1}\pdata@def{prop}{gen}{outcomeid}{#1}}
-\define@key{prop@gen}{callname}{\def\prop@gen@call{#1}\pdata@def{prop}{gen}{callname}{#1}}
-\define@key{prop@gen}{callid}{\def\prop@gen@call{#1}\pdata@def{prop}{gen}{callid}{#1}}
+\define@key{prop@gen}{callname}{\def\prop@gen@callname{#1}\pdata@def{prop}{gen}{callname}{#1}}
+\define@key{prop@gen}{callid}{\def\prop@gen@callid{#1}\pdata@def{prop}{gen}{callid}{#1}}
 \define@key{prop@gen}{iconrowheight}{\def\prop@gen@iconrowheight{#1}}
 \define@key{prop@gen}{topicsaddressed}{\def\prop@gen@topicsaddressed{#1}}
 %</pdata>
 %    \end{macrocode}
 %
-% and now the ones for the final report 
+% and now the ones for the final report
 %    \begin{macrocode}
 %<*reporting>
 \define@key{prop@gen}{reportperiod}{\def\prop@gen@reportperiod{#1}}
@@ -309,7 +309,7 @@
 \define@key{prop@gen}{projpapers}{\def\prop@gen@projpapers{#1}}
 %</reporting>
 %    \end{macrocode}
-% 
+%
 % and the default values, these will be used, if the author does not specify something
 % better.
 %
@@ -325,7 +325,7 @@
 \def\numberline#1{\hb@xt@\@tempdima{#1\hfil} }
 \fi
 %    \end{macrocode}
-% 
+%
 % \begin{macro}{\prop@sites@table}
 %    \begin{macrocode}
 \newcommand\prop@sites@table{\def\@@table{}
@@ -341,7 +341,7 @@
 \end{tabular}}
 %    \end{macrocode}
 % \end{macro}
-% 
+%
 % \begin{environment}{prop@proposal}
 %    \begin{macrocode}
 \renewenvironment{prop@proposal}
@@ -356,9 +356,9 @@
 %{\large\prop@gen@instrument}\\
 {\large\textbf{Date of Preparation: \today}}
 % \ifsubmit\else\if@svninfo\if@gitinfo\\
-% {\large\textbf{Revision}: 
+% {\large\textbf{Revision}:
 % \if@svninfo\svnInfoRevision\fi\if@gitinfo\gitAbbrevHash\fi
-%  of 
+%  of
 % \if@svninfo\svnInfoDate\fi\if@gitinfo\gitAuthorDate\fi}
 % \fi\fi\fi
 \\[1em]
@@ -388,7 +388,7 @@
 {\newpage\printbibliography[heading=warnpubs]}
 %    \end{macrocode}
 % \end{environment}
-% 
+%
 %    \begin{macrocode}
 \def\prop@gen@instrument{Proposal Instrument (e.g. IP)}
 %    \end{macrocode}
@@ -442,7 +442,7 @@
 {\pdata@def{site}{\c@site}{reqPM}{\csname thesite@\c@site @PM\endcsname}}
 %    \end{macrocode}
 % \end{environment}
-% 
+%
 % \begin{environment}{participant}
 %   \ednote{document this above} |\begin{picv}[|\meta{PM}|]{\meta{name}}| marks up the CV
 %     and metadata about a principal investigator of a site (it can only be use inside a
@@ -467,7 +467,7 @@
 {\par\medskip}
 %    \end{macrocode}
 % \end{environment}
-% 
+%
 % \subsection{Work Packages, Work Areas, and Deliverables}\label{sec::impl:wpwa}
 %
 % \begin{environment}{wp*}
@@ -478,7 +478,7 @@
 % \end{environment}
 %
 % \begin{environment}{workpackage}
-%    
+%
 %    \begin{macrocode}
 \renewenvironment{workpackage}[1][]
 {\begin{work@package}[#1]\medskip\wpheadertable%
@@ -486,7 +486,7 @@
 {\end{work@package}}
 %    \end{macrocode}
 % \end{environment}
-% 
+%
 % \begin{macro}{\wpheadertable}
 %   We redefine the macro that computes the default work package header table, since there
 %   are more sites in a EU proposal, we do this in a tabular form as asked for in the
@@ -520,9 +520,9 @@
 \define@key{milestone}{verif}{\gdef\mile@verif{#1}\pdata@def{mile}\mile@id{verif}{#1}}
 %    \end{macrocode}
 % \end{macro}
-% 
+%
 % \begin{macro}{milestonetable}
-% here we do the work. 
+% here we do the work.
 %    \begin{macrocode}
 \define@key{mst}{caption}{\gdef\mst@caption{#1}}
 \define@key{mst}{wname}{\gdef\mst@wname{#1}}
@@ -559,7 +559,7 @@
 \end{table}
 \footnotetext\miles@legend@footnote}
 %    \end{macrocode}
-% now the multilinguality support 
+% now the multilinguality support
 %    \begin{macrocode}
 \newcommand\miles@legend@name{Name}
 \newcommand\miles@legend@mo{Mo}
@@ -577,9 +577,9 @@
 \@for\@I:=\@delivs\do{\m@sep\pdataRef{deliv}\@I{label}\let\m@sep=\new@sep}}
 %    \end{macrocode}
 % \end{macro}
-% 
+%
 % \subsection{Risks}\label{sec:impl:risks}
-% 
+%
 % \begin{environment}{risk}
 %    \begin{macrocode}
 \newenvironment{risk}[3]
@@ -597,7 +597,7 @@
 % \end{environment}
 %
 % \subsection{Relevant Papers}\label{sec:impl:papers}
-% 
+%
 % \begin{macro}{\keypubs}
 %    \begin{macrocode}
 \newcommand\keypubs[2][]{%
